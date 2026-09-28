@@ -32,7 +32,7 @@ dependencies = [
     "dbt-charts==0.8.0",
     "dbt-oracle==1.11.1",
     "dbt-snowflake==1.11.6",
-    "dbt-databricks==1.11.8",
+    "dbt-databricks==1.12.5",
     "gitpython>=3.1.45",
     "pyyaml>=6.0.03",
     "httpx>=0.28.1",

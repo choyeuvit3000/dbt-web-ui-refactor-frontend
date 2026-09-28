@@ -3,13 +3,13 @@ revision = 3
 requires-python = ">=3.11, <3.14"
 resolution-markers = [
     "python_full_version >= '3.13' and sys_platform == 'win32'",
-    "python_full_version == '3.12.*' and sys_platform == 'win32'",
-    "python_full_version < '3.12' and sys_platform == 'win32'",
     "python_full_version >= '3.13' and sys_platform == 'emscripten'",
-    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
-    "python_full_version < '3.12' and sys_platform == 'emscripten'",
     "python_full_version >= '3.13' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
     "python_full_version == '3.12.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version < '3.12' and sys_platform == 'win32'",
+    "python_full_version < '3.12' and sys_platform == 'emscripten'",
     "python_full_version < '3.12' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
@@ -717,7 +717,7 @@ wheels = [
 
 [[package]]
 name = "dbt-databricks"
-version = "1.11.8"
+version = "1.12.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -727,12 +727,12 @@ dependencies = [
     { name = "dbt-common" },
     { name = "dbt-core" },
     { name = "dbt-spark" },
-    { name = "keyring" },
+    { name = "packaging" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7b/cd/675d6133c1272dfcfbcf25e091764e50350ac2f14ec37d0c5c0372f691a6/dbt_databricks-1.11.8.tar.gz", hash = "sha256:f41d890516dd7553e5d014603d00380b389d29320faa97afb1f4cb0ab0a88db5", size = 96478, upload-time = "2026-05-11T09:07:14.824Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/68/33/6c00b73a1c1c072bfcbc846a036cf0cdfb5ec19c0acc53c967f4eef2ce78/dbt_databricks-1.12.5.tar.gz", hash = "sha256:7ba466542197b8a52192dd066e8998c2fc69361677d485ec07753b9808a5ba1d", size = 121067, upload-time = "2026-09-01T13:50:04.215Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2c/4d/359825c817cd2961c718a287a53b886dd36b685b19b6ff2b4a7d71072bb4/dbt_databricks-1.11.8-py3-none-any.whl", hash = "sha256:c5c1c56a5b0552dcd109930bc6eaa1ffa2ebb3a23b49fcc4571f4772bf03c045", size = 148224, upload-time = "2026-05-11T09:07:13.503Z" },
+    { url = "https://files.pythonhosted.org/packages/ec/65/5170aa522bb1707ed56d078fc097ad605da91ad492f08244c5a39d321912/dbt_databricks-1.12.5-py3-none-any.whl", hash = "sha256:e1bdeec85b9cb95ce8e33f376888f3dc7d457d3acffc0b685101f666bf304de4", size = 179066, upload-time = "2026-09-01T13:50:02.856Z" },
 ]
 
 [[package]]
@@ -900,7 +900,7 @@ requires-dist = [
     { name = "croniter", specifier = ">=6.0.0" },
     { name = "dbt-charts", specifier = "==0.8.0" },
     { name = "dbt-core", specifier = "==1.11.8" },
-    { name = "dbt-databricks", specifier = "==1.11.8" },
+    { name = "dbt-databricks", specifier = "==1.12.5" },
     { name = "dbt-dremio", specifier = "==1.11.0" },
     { name = "dbt-duckdb", specifier = "==1.11.0" },
     { name = "dbt-oracle", specifier = "==1.11.1" },
@@ -2241,10 +2241,10 @@ version = "2.5.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.13' and sys_platform == 'win32'",
-    "python_full_version == '3.12.*' and sys_platform == 'win32'",
     "python_full_version >= '3.13' and sys_platform == 'emscripten'",
-    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
     "python_full_version >= '3.13' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
     "python_full_version == '3.12.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/22/fd/89965aa4ac08c74998539fcbf24fa3540f3e15237fbeb6bcf9c908f4aade/numpy-2.5.1.tar.gz", hash = "sha256:a48a113e6afea91f5608793bafa7ef2ad481fefbda87ec5069f483de61cb9fa3", size = 20755553, upload-time = "2026-07-04T17:08:00.933Z" }
@@ -2373,11 +2373,11 @@ wheels = [
 
 [[package]]
 name = "packaging"
-version = "26.2"
+version = "25.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz", hash = "sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661", size = 228134, upload-time = "2026-04-24T20:15:23.917Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f", size = 165727, upload-time = "2025-04-19T11:48:59.673Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl", hash = "sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e", size = 100195, upload-time = "2026-04-24T20:15:22.081Z" },
+    { url = "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484", size = 66469, upload-time = "2025-04-19T11:48:57.875Z" },
 ]
 
 [[package]]
